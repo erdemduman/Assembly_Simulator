@@ -39,8 +39,8 @@
 
 using namespace std;
 
-int main(int argc, char* argv[]){
-
+int main(int argc, char *argv[])
+{
 	string fileName = argv[1];
 	int option = atoi(argv[2]);
 
@@ -49,14 +49,12 @@ int main(int argc, char* argv[]){
 	Memory myMemory(option);
 
 	myCPUProgram.readFile(fileName);
-	Computer myComputer1(myCPU,myCPUProgram,myMemory,option);
+	Computer myComputer1(myCPU, myCPUProgram, myMemory, option);
 	Computer myComputer2(option);
 	myComputer2.setCPU(myComputer1.getCPU());
 	myComputer2.setCPUProgram(myComputer1.getCPUProgram());
 	myComputer2.setMemory(myComputer1.getMemory());
 	myComputer2.execute();
-
-
 
 	return 0;
 }

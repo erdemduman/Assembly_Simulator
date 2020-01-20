@@ -11,19 +11,19 @@ using namespace std;
 
 const int LINE_SIZE = 200;
 
-class CPUProgram{
+class CPUProgram
+{
+public:
+	CPUProgram(int option);
+	CPUProgram();
+	void readFile(string fileName);
+	string getLine(int index);
+	const int size();
+	const int getCount();
 
-	public:
-		CPUProgram(int option);
-		CPUProgram();
-		void readFile(string fileName);
-		string getLine(int index);
-		const int size();
-		const int getCount();
-
-	private:
-		int counter;
-		string database[LINE_SIZE]; //string array to store all of
-};									//the lines of file
+private:
+	int counter;
+	string database[LINE_SIZE]; //string array to store all of
+};								//the lines of file
 
 #endif
